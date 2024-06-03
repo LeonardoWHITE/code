@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>个人中心</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../index.html" class="brand-link">
+      <span class="brand-text font-weight-light">图书借阅系统</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="../index.html" class="d-block">***</a>
+        </div>
+      </div>
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-header">图书借阅系统</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-circle"></i>
+              <p>
+                个人信息
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="profile.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>个人中心</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="UserOrders.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>借阅信息</p>
+                </a>
+              </li>
+            </ul>
+       <li class="nav-item">
+         <a href="Insurance.html" class="nav-link">
+           <i class="nav-icon fas fa-circle"></i>
+           <p>
+             图书信息
+           </p>
+         </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-circle"></i>
+            <p>
+              经济人信息
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="./Broker.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>经纪人信息</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./UserBroker.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>经纪人管理</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./UserNeed.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>需求中心</p>
+              </a>
+            </li>
+          </ul>
+         </li>
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>个人信息</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item active">用户个人信息</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row" >
+          <div class="col-md-3" style="margin-left: 300px; margin-top: 100px; ">
+
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline" style="width: 600px;">
+              <div class="card-body box-profile" >
+                <h3 class="profile-username text-center" id="u_username">admin</h3>
+                <ul class="list-group list-group-unbordered mb-3">
+                  <li class="list-group-item">
+                    <b>年龄</b> <a class="float-right" id="u_age">未填写</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>职业</b> <a class="float-right" id="u_career">未填写</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>地址</b> <a class="float-right" id="u_address">未填写</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>电话号码</b> <a class="float-right" id="u_phone">未填写</a>
+                  </li>
+                </ul>
+
+                <a class="btn btn-primary btn-block"  id="update"><b>修改信息</b></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong></strong>
+    版权所有：***
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.1.2.4
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<script src="../js/UserProfile.js"></script>
+</body>
+</html>

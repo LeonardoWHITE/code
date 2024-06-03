@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "- /mybatis.org /DTD Mapper 3.0 /EN"
+        "http: /mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.BrokerMapper">
+    <update id="updateBroker">
+        UPDATE broker
+        SET b_name=#{b_name},b_realname=#{b_realname},b_age=#{b_age},b_gender=#{b_gender},b_phone=#{b_phone},b_profile=#{b_profile}
+        WHERE b_name=#{b_name}
+    </update>
+
+
+    <select id="getAll" resultType="com.example.bean.Broker">
+        SELECT * FROM broker
+    </select>
+
+    <select id="getBrokerName" resultType="java.lang.String">
+        SELECT b_name FROM broker
+    </select>
+
+    <select id="getBroekr" resultType="com.example.bean.Broker">
+        SELECT b_id,b_password,b_name,b_realname,b_age,b_gender,b_phone,b_profile FROM broker WHERE b_name=#{b_name}
+    </select>
+    <select id="NumberOfBroker" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM `broker`
+    </select>
+</mapper>

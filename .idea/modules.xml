@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance.iml" filepath="$PROJECT_DIR$/Insurance/Insurance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance_Broker/Insurance_Broker.iml" filepath="$PROJECT_DIR$/Insurance/Insurance_Broker/Insurance_Broker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance_Function/Insurance_Function.iml" filepath="$PROJECT_DIR$/Insurance/Insurance_Function/Insurance_Function.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance_Orders/Insurance_Orders.iml" filepath="$PROJECT_DIR$/Insurance/Insurance_Orders/Insurance_Orders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance_User/Insurance_User.iml" filepath="$PROJECT_DIR$/Insurance/Insurance_User/Insurance_User.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance_gateway/Insurance_gateway.iml" filepath="$PROJECT_DIR$/Insurance/Insurance_gateway/Insurance_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance_needs/Insurance_needs.iml" filepath="$PROJECT_DIR$/Insurance/Insurance_needs/Insurance_needs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Insurance/Insurance_register/Insurance_register.iml" filepath="$PROJECT_DIR$/Insurance/Insurance_register/Insurance_register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/code.iml" filepath="$PROJECT_DIR$/.idea/code.iml" />
+    </modules>
+  </component>
+</project>

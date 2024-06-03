@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用户信息</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="height: 750px;">
+    <!-- Brand Logo -->
+    <a href="../Brokerindex.html" class="brand-link">
+      <span class="brand-text font-weight-light">图书借阅管理系统</span>
+    </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="../Brokerindex.html" class="d-block" id="b_name">***</a>
+        </div>
+      </div>
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-header">图书借阅系统</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-circle"></i>
+              <p>
+                个人信息
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./Brokerprofile.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>个人中心</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./BrokerOrders.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>借阅信息</p>
+                </a>
+              </li>
+            </ul>
+       <li class="nav-item">
+         <a href="./Insurance.html" class="nav-link">
+           <i class="nav-icon fas fa-circle"></i>
+           <p>
+             图书信息
+           </p>
+         </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-circle"></i>
+            <p>
+              用户信息
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="User.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>用户信息</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./BrokerUser.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>用户管理</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./BrokerNeed.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>需求中心</p>
+              </a>
+            </li>
+          </ul>
+         </li>
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">个人信息</h3>
+  
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search" id="search">
+  
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default" id="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ./card-header -->
+              <div class="card-body">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>用户名</th>
+                      <th>年龄</th>
+                      <th>地址</th>
+                      <th>联系方式</th>
+					  <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody id="User">
+                    <td>暂无数据</td>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+			<div class="container">
+					<div class="modal" id="list-broker">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title"><span></span></h4>
+								</div>
+								<div class="modal-body">
+									<p class="" style="font-size: 18px">确定选择该保险经纪人吗？</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button"
+											class="btn btn-default"
+											data-dismiss="modal">取消
+									</button>
+									<button type="button"
+											class="btn btn-success" id="pickbroker" >确定
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            <!-- /.card -->
+          </div>
+        </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong></strong>
+    版权所有：***
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.1.2.4
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+<script src="../js/user.js"></script>
+</body>
+</html>

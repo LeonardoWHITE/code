@@ -1,0 +1,11 @@
+启动顺序
+RegistryApplication
+GetewayApplication
+BrokerApplication
+OrderApplication
+NeedsApplication
+UserApplication
+FunctionApplication
+
+
+http://localhost:63342/

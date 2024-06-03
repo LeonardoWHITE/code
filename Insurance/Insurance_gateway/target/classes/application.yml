@@ -1,0 +1,64 @@
+server:
+  port: 8989
+
+spring:
+  application:
+    name: Insurance-gateway
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: user
+#          uri: http://localhost:8088
+#          predicates:
+#            - Path=/user/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka/
+
+
+
+ribbon:
+  ConnectTimeout: 5000 # 连接超时时间(ms)
+  ReadTimeout: 5000 # 通信超时时间(ms)
+hystrix:
+  command:
+    default:
+    execution:
+    isolation:
+    thread:
+    timeoutInMilliseconds: 60000 # 设置hystrix的超时时间为6000ms
+
+zuul:
+  routes:
+#用户服务
+    user:
+      # 服务映射的路径，通过这路径就可以从外部访问你的服务了，目的是为了不爆露你机器的IP
+      path: /user/**
+      # 这里一定要是你Eureka注册中心的服务的名称，是所以这里配置serviceId因为跟eureka结合了
+      serviceId: Insurance-User
+#保险经纪人服务
+    broker:
+      # 服务映射的路径，通过这路径就可以从外部访问你的服务了，目的是为了不爆露你机器的IP
+      path: /broker/**
+      # 这里一定要是你Eureka注册中心的服务的名称，是所以这里配置serviceId因为跟eureka结合了
+      serviceId: Insurance-Broker
+#需求服务
+    needs:
+      # 服务映射的路径，通过这路径就可以从外部访问你的服务了，目的是为了不爆露你机器的IP
+      path: /needs/**
+      # 这里一定要是你Eureka注册中心的服务的名称，是所以这里配置serviceId因为跟eureka结合了
+      serviceId: Insurance-Need
+#保险服务
+    function:
+      # 服务映射的路径，通过这路径就可以从外部访问你的服务了，目的是为了不爆露你机器的IP
+      path: /function/**
+      # 这里一定要是你Eureka注册中心的服务的名称，是所以这里配置serviceId因为跟eureka结合了
+      serviceId: Insurance-Function
+#订单服务
+    Order:
+      # 服务映射的路径，通过这路径就可以从外部访问你的服务了，目的是为了不爆露你机器的IP
+      path: /order/**
+      # 这里一定要是你Eureka注册中心的服务的名称，是所以这里配置serviceId因为跟eureka结合了
+      serviceId: Insurance-Order

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Insurance_Function" />
+        <module name="Insurance_Broker" />
+        <module name="Insurance_gateway" />
+        <module name="Insurance_register" />
+        <module name="Insurance_User" />
+        <module name="Insurance_needs" />
+        <module name="Insurance_Orders" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="Insurance_Order" target="1.8" />
+      <module name="Insurance_registra" target="1.8" />
+      <module name="Insurance_registry" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Insurance_Broker" options="-parameters" />
+      <module name="Insurance_Function" options="-parameters" />
+      <module name="Insurance_Order" options="-parameters" />
+      <module name="Insurance_Orders" options="-parameters" />
+      <module name="Insurance_User" options="-parameters" />
+      <module name="Insurance_gateway" options="-parameters" />
+      <module name="Insurance_needs" options="-parameters" />
+      <module name="Insurance_register" options="-parameters" />
+      <module name="Insurance_registra" options="-parameters" />
+      <module name="Insurance_registry" options="-parameters" />
+      <module name="demo" options="-parameters" />
+    </option>
+  </component>
+</project>

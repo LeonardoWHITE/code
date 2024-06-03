@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "- /mybatis.org /DTD Mapper 3.0 /EN"
+        "http: /mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.OrderMapper">
+
+    <insert id="AddOrder">
+        INSERT INTO orders
+        (i_id,i_name,i_price,u_id,u_username,b_id,b_name,b_e_username,b_e_phone,B_time,E_time,state)
+        VALUES
+        (#{i_id},#{i_name},#{i_price},#{u_id},#{u_username},#{b_id},#{b_name},#{b_e_username},#{b_e_phone},#{B_time},#{E_time},#{state})
+    </insert>
+
+    <update id="confirmOrder">
+        UPDATE orders
+        SET state=#{state}
+        WHERE o_id =#{o_id}
+    </update>
+
+    <update id="buyOrder">
+        UPDATE orders
+        SET state="已购买"
+        WHERE o_id =#{o_id}
+    </update>
+
+    <delete id="deldeteOrder">
+        DELETE FROM orders WHERE o_id = #{o_id}
+    </delete>
+
+    <select id="NumberOfOrders" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM `orders` WHERE u_username = #{u_username}
+    </select>
+
+    <select id="getOders" resultType="com.example.bean.Order">
+        SELECT * FROM orders WHERE u_username = #{u_username}
+    </select>
+
+    <select id="getOdersByBroker" resultType="com.example.bean.Order">
+        SELECT * FROM orders WHERE b_name = #{b_name}
+    </select>
+
+    <select id="NumberOfOrdersB" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM `orders` WHERE b_name = #{b_name}
+    </select>
+
+    <select id="getOdersByID" resultType="com.example.bean.Order">
+        SELECT * FROM orders WHERE o_id = #{o_id}
+    </select>
+
+</mapper>

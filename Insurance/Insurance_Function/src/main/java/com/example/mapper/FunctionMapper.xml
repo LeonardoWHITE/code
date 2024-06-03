@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "- /mybatis.org /DTD Mapper 3.0 /EN"
+        "http: /mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.FunctionMapper">
+
+    <select id="getAll" resultType="com.example.bean.Function">
+        SELECT * FROM insurance
+    </select>
+
+    <select id="getInsuranceName" resultType="java.lang.String">
+        SELECT i_name FROM insurance
+    </select>
+
+    <select id="getInsurance" resultType="com.example.bean.Function">
+        SELECT * FROM insurance WHERE i_id=#{i_id}
+    </select>
+
+    <select id="getInsuranceId" resultType="java.lang.Integer">
+        SELECT i_id FROM insurance
+    </select>
+
+    <select id="NumberOfInsurance" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM `insurance`
+    </select>
+
+    <select id="getweight" resultType="com.example.bean.Function">
+        SELECT * FROM insurance WHERE i_weight=#{i_weight}
+    </select>
+
+    <select id="InsuranceType" resultType="com.example.bean.Function">
+        SELECT * FROM insurance WHERE i_profile=#{i_profile}
+    </select>
+
+    <select id="grouping" resultType="com.example.bean.grouping">
+        select i_profile, count(*) as num from insurance group by i_profile
+    </select>
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "- /mybatis.org /DTD Mapper 3.0 /EN"
+        "http: /mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.NeedsMapper">
+    <insert id="AddNedds">
+        INSERT INTO needs
+        (u_id,b_id,needs,date,u_username,b_name,b_realname)
+        VALUES
+        (#{u_id},#{b_id},#{needs},#{date},#{u_username},#{b_name},#{b_realname})
+    </insert>
+
+    <update id="Addfeedback">
+
+    </update>
+
+    <update id="feedbackNeed">
+        UPDATE needs
+        SET feedback= #{feedback}
+        WHERE n_id = #{n_id}
+    </update>
+
+
+    <delete id="delectNeed">
+        DELETE FROM needs WHERE n_id = #{n_id}
+    </delete>
+
+
+    <select id="UserGetNeed" resultType="com.example.bean.Needs">
+        SELECT * FROM needs WHERE u_username = #{u_username}
+    </select>
+
+    <select id="NumberOfNeeds" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM `needs` WHERE u_username = #{u_username}
+    </select>
+
+    <select id="selectNeedByb_id" resultType="com.example.bean.Needs">
+        SELECT * FROM needs WHERE b_id = #{b_id}
+    </select>
+
+    <select id="selectNeedByu_id" resultType="com.example.bean.Needs">
+        SELECT * FROM needs WHERE u_id = #{u_id} AND b_name = #{b_name}
+    </select>
+
+
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "- /mybatis.org /DTD Mapper 3.0 /EN"
+        "http: /mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.UserMapper">
+    <select id="selectByusername" parameterType="String" resultType="com.bean.User">
+        SELECT * FROM `user` WHERE u_username=#{u_username}
+    </select>
+
+    <select id="getAll" resultType="com.bean.User">
+        SELECT * FROM user
+    </select>
+
+    <select id="getUsername" resultType="java.lang.String">
+        SELECT u_username FROM `user`
+    </select>
+
+    <select id="getUserByBroker" resultType="com.bean.User">
+        SELECT * FROM `user` WHERE manager=#{manager}
+    </select>
+
+    <select id="NumberOfUsers" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM `user`
+    </select>
+
+    <update id="updateUser" >
+        UPDATE user
+        <set>
+            <if test="u_phone != null">u_phone=#{u_phone},</if>
+            <if test="u_age != null">u_age=#{u_age},</if>
+            <if test="u_career != null">u_career=#{u_career},</if>
+            <if test="u_address != null">u_address=#{u_address},</if>
+        </set>
+        WHERE u_username =#{u_username}
+    </update>
+
+    <insert id="insertUser">
+        INSERT INTO user
+        (u_username,u_password,u_age,u_phone,u_career,u_address)
+        VALUES
+        (#{u_username},#{u_password},#{u_age},#{u_phone},#{u_career},#{u_address})
+    </insert>
+
+    <update id="PickBroker">
+        UPDATE user
+        SET manager=#{manager}
+        WHERE u_username =#{u_username}
+    </update>
+
+    <update id="relieveBroker">
+        UPDATE `user` SET manager = NULL WHERE u_username = #{u_username}
+    </update>
+
+    <update id="relieveUser">
+        UPDATE `user` SET manager = NULL WHERE b_name = #{b_name}
+    </update>
+
+</mapper>

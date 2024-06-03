@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css"/>
+		<style type="text/css">
+		    .title{
+		      margin:10px auto;
+		      text-align:center;
+		      font-size:30px;
+		    }
+		    .button{
+		    margin:10px auto;
+		    text-align:center;
+		    }
+			.p{
+			margin-left: 50px;
+			}
+		    </style>
+	</head>
+	<body  style="margin: 0 auto;">
+		<div><br />
+			<form name="hetong" action="/text2/hetong/updatehetong.action">
+			<div class="title">保险合同</div>
+			<div style="margin-left: 300px; font-size: 16px;">
+				<p>投保方：<span id="u_username" style="color: red;"></span>（以下简称甲方）；</p>
+				<p>代理方：<span id="b_name" style="color: red;"></span>（以下简称乙方）。　</p>　
+				<p>甲乙双方根据《中华人民共和国保险法》、《保险代理人管理规定(试行)》等有关法律、法规，本着平等自愿的原则，经协商一致，签订本保险代理合同。</p>
+				<p>一、本合同一经订立即生效。</p>
+				<p>二、甲方委托乙方在甲方授权范围内，以甲方的名义代甲方办理个人人身保险业务，乙方在本合同有效期内，按照约定范围从事代理活动所产生的保险责任由甲方承担。
+				<p>甲方按本合同约定支付乙方代理手续费(佣金，下同)。本合同及相关文件内容均不直接或间接构成甲方与乙方之间有雇主与雇员关系。</p>
+				<p>三、在本合同有效期内乙方可在市行政区划范围内以甲方名义招揽甲方开办的适合个人投保的人身保险业务(具体险种见附件)、收取保险费及提供售后服务。</p>　
+				<p>四：甲方根据业务发展的需要可以对乙方代理的业务区域、险种及其他授权内容进行调整。</p>
+				<p>责任免除</p>
+				<p>因下列情形之一，导致被保险人身故的，本公司不负给付保险金责任:</p>
+				<p>投保人、借阅人对被保险人故意杀害、伤害:</p>
+				<p>被保险人故意犯罪或拒捕、故意自伤:</p>
+				<p>被保险人服用、吸食或注射毒品</p>
+				<p>发生上述第四款情形，本合同终止，本公司对投保人退还保险单的现金价值。　</p>
+				<p>订单编号：<span id="o_id" style="color: red;">_________</span>		保险编号：<span id="i_id" style="color: red;">_________</span></p>
+				<p>图书名称：<span id="i_name" style="color: red;">_________</span>		图书价格：<span id="i_price" style="color: red;">_________</span></p>
+				<p>借阅人名：<span id="b_e_username" style="color: red;">_________</span>		联系方式：<span id="b_e_phone" style="color: red;">_________</span></p>
+				<p>投保时间：<span id="b_time" style="color: red;">_________</span>		结束时间：<span id="e_time" style="color: red;">_________</span></p>
+			</div>
+				<div class="button">			
+		        <input class="btn btn6" onclick="preview()" value="打印合同" type="button">
+		        <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button" id="back">
+		        </div>
+			</form>
+		</div>
+	</body>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/Brokerdetali.js"></script>
+</html>
